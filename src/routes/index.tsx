@@ -115,24 +115,24 @@ function Hero({ onInquire }: { onInquire: (s?: string) => void }) {
         <div className="absolute inset-0" style={{ background: "var(--gradient-radial-gold)" }} />
       </div>
 
-      <div className="relative container mx-auto px-4 pt-12 pb-24 sm:pt-16 sm:pb-32 text-center">
-        <div className="relative mx-auto w-fit">
-          <div className="absolute -inset-4 sm:-inset-6 bg-gradient-to-tr from-primary/30 via-amber-400/20 to-primary/30 blur-2xl rounded-full animate-pulse-slow" />
-          <img src={logo.url} alt="Star Electronics & Repering Centre logo" className="relative mx-auto h-48 sm:h-60 md:h-72 w-auto rounded-2xl sm:rounded-3xl shadow-gold-lg ring-2 ring-primary/40 ring-offset-4 ring-offset-background object-cover" />
-        </div>
+      <div className="relative container mx-auto px-4 pt-16 pb-24 sm:pt-24 sm:pb-32 text-center">
+        <img src={logo.url} alt="Star Electronics & Repering Centre logo" className="mx-auto h-32 sm:h-40 w-auto rounded-xl shadow-gold-lg animate-float" />
 
-        <div className="mt-8 sm:mt-10 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/40 bg-primary/5 text-xs uppercase tracking-[0.25em] text-primary animate-fade-up">
+        <div className="mt-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/40 bg-primary/5 text-xs uppercase tracking-[0.25em] text-primary animate-fade-up">
           <Sparkles className="h-3.5 w-3.5" /> A Unit of Iqbal Multitrade
         </div>
 
-        <h1 className="mt-6 font-display text-3xl sm:text-5xl lg:text-6xl font-bold tracking-wide animate-fade-up">
-          <span className="text-gold-gradient">STAR ELECTRONICS</span>
+        <h1 className="mt-6 font-display text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] animate-fade-up">
+          <span className="text-gold-gradient">Your One-Stop</span>
           <br />
-          <span className="shimmer-gold text-xl sm:text-3xl lg:text-4xl tracking-[0.15em]">& REPERING CENTRE</span>
+          <span className="shimmer-gold">Electronics & Repair</span>
+          <br />
+          <span className="text-foreground">Destination</span>
         </h1>
 
-        <p className="mt-4 max-w-2xl mx-auto text-base sm:text-lg text-muted-foreground animate-fade-up">
-          Your One-Stop Electronics & Repair Destination in Mahishi, Saharsa, Bihar
+        <p className="mt-6 max-w-2xl mx-auto text-base sm:text-lg text-muted-foreground animate-fade-up">
+          Mobile accessories, electronics products, repair services, chargers, speakers, cables,
+          LED products and much more at affordable prices.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-3 animate-fade-up">
