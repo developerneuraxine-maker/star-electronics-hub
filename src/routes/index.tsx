@@ -25,7 +25,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-import logo from "@/assets/star-logo.asset.json";
+import logoImg from "@/assets/star-logo.jpg";
 import hero from "@/assets/hero-store.jpg";
 import repairImg from "@/assets/repair-service.jpg";
 import pCharger from "@/assets/product-charger.jpg";
@@ -58,10 +58,10 @@ export const Route = createFileRoute("/")({
         content:
           "Mobile repair, accessories, LED & electronics in Mahishi, Saharsa, Bihar. Call +91 79090 50275.",
       },
-      { property: "og:image", content: logo.url },
+      { property: "og:image", content: logoImg },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: logo.url },
+      { name: "twitter:image", content: logoImg },
       {
         name: "keywords",
         content:
@@ -106,12 +106,7 @@ function Header({ onInquire }: { onInquire: (s?: string) => void }) {
     <header className="sticky top-0 z-40 backdrop-blur-xl bg-background/75 border-b border-primary/15">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3">
-          <img
-            src={logo.url}
-            alt="Star Electronics logo"
-            className="h-12 w-12 rounded-md object-cover ring-1 ring-primary/40"
-          />
-          <div className="hidden sm:block leading-tight">
+          <div className="leading-tight">
             <div className="font-display text-base sm:text-lg text-gold-gradient font-bold tracking-wide">
               STAR ELECTRONICS
             </div>
@@ -169,7 +164,7 @@ function Hero({ onInquire }: { onInquire: (s?: string) => void }) {
 
       <div className="relative container mx-auto px-4 pt-16 pb-24 sm:pt-24 sm:pb-32 text-center">
         <img
-          src={logo.url}
+          src={logoImg}
           alt="Star Electronics & Repering Centre logo"
           className="mx-auto h-32 sm:h-40 w-auto rounded-xl shadow-gold-lg animate-float"
         />
@@ -497,7 +492,7 @@ function About() {
         <div className="relative">
           <div className="absolute -inset-6 bg-gold-gradient opacity-30 blur-3xl rounded-full" />
           <img
-            src={logo.url}
+            src={logoImg}
             alt="Star Electronics logo"
             className="relative mx-auto w-full max-w-md rounded-3xl shadow-gold-lg"
           />
@@ -695,11 +690,6 @@ function Footer() {
       <div className="container mx-auto px-4 py-14 grid md:grid-cols-3 gap-10">
         <div>
           <div className="flex items-center gap-3">
-            <img
-              src={logo.url}
-              alt="Star Electronics"
-              className="h-12 w-12 rounded-md ring-1 ring-primary/40"
-            />
             <div>
               <div className="font-display font-bold text-gold-gradient">STAR ELECTRONICS</div>
               <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
