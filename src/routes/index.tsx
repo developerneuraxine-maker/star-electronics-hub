@@ -3,9 +3,26 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { InquiryDialog } from "@/components/InquiryDialog";
 import {
-  Phone, MessageCircle, MapPin, Mail, Clock, Star, ShieldCheck, Zap, Wrench,
-  Smartphone, Cable, Lightbulb, Speaker, Battery, Headphones, Settings,
-  Award, Users, ThumbsUp, Sparkles,
+  Phone,
+  MessageCircle,
+  MapPin,
+  Mail,
+  Clock,
+  Star,
+  ShieldCheck,
+  Zap,
+  Wrench,
+  Smartphone,
+  Cable,
+  Lightbulb,
+  Speaker,
+  Battery,
+  Headphones,
+  Settings,
+  Award,
+  Users,
+  ThumbsUp,
+  Sparkles,
 } from "lucide-react";
 
 import logo from "@/assets/star-logo.asset.json";
@@ -26,15 +43,30 @@ const PHONE_DISPLAY = "+91 7909050275";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Star Electronics & Repering Centre — Mobile Repair & Accessories in Mahishi, Saharsa" },
-      { name: "description", content: "Trusted electronics shop & repair centre in Mahishi, Saharsa. Mobile repair, chargers, LED bulbs, speakers, accessories. Trusted Service, Best Price." },
+      {
+        title:
+          "Star Electronics & Repering Centre — Mobile Repair & Accessories in Mahishi, Saharsa",
+      },
+      {
+        name: "description",
+        content:
+          "Trusted electronics shop & repair centre in Mahishi, Saharsa. Mobile repair, chargers, LED bulbs, speakers, accessories. Trusted Service, Best Price.",
+      },
       { property: "og:title", content: "Star Electronics & Repering Centre" },
-      { property: "og:description", content: "Mobile repair, accessories, LED & electronics in Mahishi, Saharsa, Bihar. Call +91 79090 50275." },
+      {
+        property: "og:description",
+        content:
+          "Mobile repair, accessories, LED & electronics in Mahishi, Saharsa, Bihar. Call +91 79090 50275.",
+      },
       { property: "og:image", content: logo.url },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: logo.url },
-      { name: "keywords", content: "Star Electronics Mahishi, Electronics Shop Saharsa, Mobile Repair Mahishi, Electronics Repair Centre Bihar, Mobile Accessories Shop Saharsa, LED Bulb Shop Saharsa, Mobile Charger Shop Bihar" },
+      {
+        name: "keywords",
+        content:
+          "Star Electronics Mahishi, Electronics Shop Saharsa, Mobile Repair Mahishi, Electronics Repair Centre Bihar, Mobile Accessories Shop Saharsa, LED Bulb Shop Saharsa, Mobile Charger Shop Bihar",
+      },
     ],
   }),
   component: Index,
@@ -74,10 +106,18 @@ function Header({ onInquire }: { onInquire: (s?: string) => void }) {
     <header className="sticky top-0 z-40 backdrop-blur-xl bg-background/75 border-b border-primary/15">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3">
-          <img src={logo.url} alt="Star Electronics logo" className="h-12 w-12 rounded-md object-cover ring-1 ring-primary/40" />
+          <img
+            src={logo.url}
+            alt="Star Electronics logo"
+            className="h-12 w-12 rounded-md object-cover ring-1 ring-primary/40"
+          />
           <div className="hidden sm:block leading-tight">
-            <div className="font-display text-base sm:text-lg text-gold-gradient font-bold tracking-wide">STAR ELECTRONICS</div>
-            <div className="text-[10px] sm:text-xs text-muted-foreground tracking-widest uppercase">Trusted Service, Best Price</div>
+            <div className="font-display text-base sm:text-lg text-gold-gradient font-bold tracking-wide">
+              STAR ELECTRONICS
+            </div>
+            <div className="text-[10px] sm:text-xs text-muted-foreground tracking-widest uppercase">
+              Trusted Service, Best Price
+            </div>
           </div>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm">
@@ -87,7 +127,13 @@ function Header({ onInquire }: { onInquire: (s?: string) => void }) {
             ["About", "#about"],
             ["Contact", "#contact"],
           ].map(([l, h]) => (
-            <a key={h} href={h} className="text-muted-foreground hover:text-primary transition-colors">{l}</a>
+            <a
+              key={h}
+              href={h}
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              {l}
+            </a>
           ))}
         </nav>
         <div className="flex items-center gap-2">
@@ -110,13 +156,23 @@ function Hero({ onInquire }: { onInquire: (s?: string) => void }) {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="absolute inset-0">
-        <img src={hero} alt="Premium electronics store" width={1920} height={1080} className="w-full h-full object-cover opacity-40" />
+        <img
+          src={hero}
+          alt="Premium electronics store"
+          width={1920}
+          height={1080}
+          className="w-full h-full object-cover opacity-40"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background" />
         <div className="absolute inset-0" style={{ background: "var(--gradient-radial-gold)" }} />
       </div>
 
       <div className="relative container mx-auto px-4 pt-16 pb-24 sm:pt-24 sm:pb-32 text-center">
-        <img src={logo.url} alt="Star Electronics & Repering Centre logo" className="mx-auto h-32 sm:h-40 w-auto rounded-xl shadow-gold-lg animate-float" />
+        <img
+          src={logo.url}
+          alt="Star Electronics & Repering Centre logo"
+          className="mx-auto h-32 sm:h-40 w-auto rounded-xl shadow-gold-lg animate-float"
+        />
 
         <div className="mt-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/40 bg-primary/5 text-xs uppercase tracking-[0.25em] text-primary animate-fade-up">
           <Sparkles className="h-3.5 w-3.5" /> A Unit of Iqbal Multitrade
@@ -131,8 +187,8 @@ function Hero({ onInquire }: { onInquire: (s?: string) => void }) {
         </h1>
 
         <p className="mt-6 max-w-2xl mx-auto text-base sm:text-lg text-muted-foreground animate-fade-up">
-          Mobile accessories, electronics products, repair services, chargers, speakers, cables,
-          LED products and much more at affordable prices.
+          Mobile accessories, electronics products, repair services, chargers, speakers, cables, LED
+          products and much more at affordable prices.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-3 animate-fade-up">
@@ -141,7 +197,12 @@ function Hero({ onInquire }: { onInquire: (s?: string) => void }) {
               <MessageCircle className="h-5 w-5" /> Contact on WhatsApp
             </Button>
           </a>
-          <Button variant="gold" size="lg" className="h-12 px-6 text-base" onClick={() => onInquire("Repair Service")}>
+          <Button
+            variant="gold"
+            size="lg"
+            className="h-12 px-6 text-base"
+            onClick={() => onInquire("Repair Service")}
+          >
             <Wrench className="h-5 w-5" /> Request Repair Service
           </Button>
           <a href={`tel:${PHONE}`}>
@@ -174,27 +235,59 @@ function Hero({ onInquire }: { onInquire: (s?: string) => void }) {
 /* ---------- SERVICES ---------- */
 const services = [
   {
-    icon: Smartphone, title: "Mobile Repair",
-    items: ["Screen Replacement", "Battery Issues", "Charging Problems", "Software Issues", "General Repairs"],
+    icon: Smartphone,
+    title: "Mobile Repair",
+    items: [
+      "Screen Replacement",
+      "Battery Issues",
+      "Charging Problems",
+      "Software Issues",
+      "General Repairs",
+    ],
   },
   {
-    icon: Cable, title: "Mobile Accessories",
-    items: ["Chargers", "Data Cables", "Earphones", "Bluetooth Devices", "Power Banks", "Covers & Tempered Glass"],
+    icon: Cable,
+    title: "Mobile Accessories",
+    items: [
+      "Chargers",
+      "Data Cables",
+      "Earphones",
+      "Bluetooth Devices",
+      "Power Banks",
+      "Covers & Tempered Glass",
+    ],
   },
   {
-    icon: Lightbulb, title: "Electronics Products",
-    items: ["LED Bulbs", "Emergency Lights", "Electrical Accessories", "Speakers", "Adapters, Switches, Wires"],
+    icon: Lightbulb,
+    title: "Electronics Products",
+    items: [
+      "LED Bulbs",
+      "Emergency Lights",
+      "Electrical Accessories",
+      "Speakers",
+      "Adapters, Switches, Wires",
+    ],
   },
   {
-    icon: Settings, title: "Repair Services",
-    items: ["Electronics Repair", "Home Appliance Repair", "Electrical Repair", "Maintenance Services"],
+    icon: Settings,
+    title: "Repair Services",
+    items: [
+      "Electronics Repair",
+      "Home Appliance Repair",
+      "Electrical Repair",
+      "Maintenance Services",
+    ],
   },
 ];
 
 function Services({ onInquire }: { onInquire: (s?: string) => void }) {
   return (
     <section id="services" className="py-20 sm:py-28 container mx-auto px-4">
-      <SectionHeader eyebrow="What We Do" title="Premium Services" subtitle="From everyday accessories to expert repairs — handled with care and craftsmanship." />
+      <SectionHeader
+        eyebrow="What We Do"
+        title="Premium Services"
+        subtitle="From everyday accessories to expert repairs — handled with care and craftsmanship."
+      />
       <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map(({ icon: Icon, title, items }) => (
           <div key={title} className="premium-card rounded-2xl p-6 flex flex-col">
@@ -204,10 +297,18 @@ function Services({ onInquire }: { onInquire: (s?: string) => void }) {
             <h3 className="mt-5 font-display text-xl font-bold text-gold-gradient">{title}</h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground flex-1">
               {items.map((it) => (
-                <li key={it} className="flex gap-2"><span className="text-primary">◆</span>{it}</li>
+                <li key={it} className="flex gap-2">
+                  <span className="text-primary">◆</span>
+                  {it}
+                </li>
               ))}
             </ul>
-            <Button variant="goldOutline" size="sm" className="mt-6" onClick={() => onInquire(title)}>
+            <Button
+              variant="goldOutline"
+              size="sm"
+              className="mt-6"
+              onClick={() => onInquire(title)}
+            >
               <MessageCircle className="h-4 w-4" /> Inquire
             </Button>
           </div>
@@ -233,15 +334,25 @@ function Products({ onInquire }: { onInquire: (s?: string) => void }) {
   return (
     <section id="products" className="py-20 sm:py-28">
       <div className="container mx-auto px-4">
-        <SectionHeader eyebrow="Showcase" title="Featured Products" subtitle="Quality accessories and electronics — handpicked for performance and value." />
+        <SectionHeader
+          eyebrow="Showcase"
+          title="Featured Products"
+          subtitle="Quality accessories and electronics — handpicked for performance and value."
+        />
         <div className="mt-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {products.map((p) => {
             const Icon = p.icon;
             return (
               <article key={p.name} className="premium-card rounded-2xl overflow-hidden group">
                 <div className="aspect-square overflow-hidden bg-black relative">
-                  <img src={p.img} alt={p.name} loading="lazy" width={800} height={800}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    loading="lazy"
+                    width={800}
+                    height={800}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                   <div className="absolute top-3 left-3 px-2.5 py-1 text-[10px] uppercase tracking-wider rounded-full bg-background/70 border border-primary/40 text-primary backdrop-blur-sm">
                     {p.category}
                   </div>
@@ -251,7 +362,12 @@ function Products({ onInquire }: { onInquire: (s?: string) => void }) {
                     <Icon className="h-4 w-4 text-primary" />
                     <h3 className="font-semibold text-foreground line-clamp-1">{p.name}</h3>
                   </div>
-                  <Button variant="gold" size="sm" className="mt-3 w-full" onClick={() => onInquire(p.name)}>
+                  <Button
+                    variant="gold"
+                    size="sm"
+                    className="mt-3 w-full"
+                    onClick={() => onInquire(p.name)}
+                  >
                     Get Price / Inquiry
                   </Button>
                 </div>
@@ -271,8 +387,14 @@ function RepairCTA({ onInquire }: { onInquire: (s?: string) => void }) {
       <div className="relative overflow-hidden rounded-3xl premium-card">
         <div className="grid md:grid-cols-2">
           <div className="relative min-h-[300px]">
-            <img src={repairImg} alt="Mobile repair service" loading="lazy" width={1400} height={900}
-              className="absolute inset-0 w-full h-full object-cover" />
+            <img
+              src={repairImg}
+              alt="Mobile repair service"
+              loading="lazy"
+              width={1400}
+              height={900}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/80 md:to-card" />
           </div>
           <div className="p-8 sm:p-12 flex flex-col justify-center">
@@ -283,7 +405,8 @@ function RepairCTA({ onInquire }: { onInquire: (s?: string) => void }) {
               Need Electronics Repair?
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Submit your repair request and our team will contact you quickly with the best price and turnaround time.
+              Submit your repair request and our team will contact you quickly with the best price
+              and turnaround time.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button variant="gold" size="lg" onClick={() => onInquire("Repair Service")}>
@@ -304,7 +427,11 @@ function RepairCTA({ onInquire }: { onInquire: (s?: string) => void }) {
 
 /* ---------- WHY CHOOSE US ---------- */
 const reasons = [
-  { icon: ShieldCheck, title: "Trusted Service", desc: "Years of reliable service to our local community." },
+  {
+    icon: ShieldCheck,
+    title: "Trusted Service",
+    desc: "Years of reliable service to our local community.",
+  },
   { icon: Zap, title: "Affordable Pricing", desc: "Best prices on accessories and repairs." },
   { icon: Wrench, title: "Experienced Technicians", desc: "Skilled hands for delicate repairs." },
   { icon: Clock, title: "Quick Repair Solutions", desc: "Same-day fixes for most issues." },
@@ -317,7 +444,11 @@ const reasons = [
 function WhyChooseUs() {
   return (
     <section className="py-20 sm:py-28 container mx-auto px-4">
-      <SectionHeader eyebrow="Why Star?" title="Why Choose Us" subtitle="Eight reasons our customers keep coming back." />
+      <SectionHeader
+        eyebrow="Why Star?"
+        title="Why Choose Us"
+        subtitle="Eight reasons our customers keep coming back."
+      />
       <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
         {reasons.map(({ icon: Icon, title, desc }) => (
           <div key={title} className="premium-card rounded-2xl p-5 text-center">
@@ -348,9 +479,9 @@ function About() {
             located in <strong className="text-foreground">Mahishi, Saharsa, Bihar</strong>.
           </p>
           <p className="mt-3 text-muted-foreground leading-relaxed">
-            We provide quality electronics products, mobile accessories, repair services,
-            electrical items, LED products, and customer-friendly support at affordable prices.
-            Our mission is to provide trusted service and best prices for every customer.
+            We provide quality electronics products, mobile accessories, repair services, electrical
+            items, LED products, and customer-friendly support at affordable prices. Our mission is
+            to provide trusted service and best prices for every customer.
           </p>
           <div className="mt-6 grid grid-cols-2 gap-4">
             <div className="premium-card rounded-xl p-4">
@@ -365,7 +496,11 @@ function About() {
         </div>
         <div className="relative">
           <div className="absolute -inset-6 bg-gold-gradient opacity-30 blur-3xl rounded-full" />
-          <img src={logo.url} alt="Star Electronics logo" className="relative mx-auto w-full max-w-md rounded-3xl shadow-gold-lg" />
+          <img
+            src={logo.url}
+            alt="Star Electronics logo"
+            className="relative mx-auto w-full max-w-md rounded-3xl shadow-gold-lg"
+          />
         </div>
       </div>
     </section>
@@ -383,7 +518,11 @@ const testimonials = [
 function Testimonials() {
   return (
     <section className="py-20 sm:py-28 container mx-auto px-4">
-      <SectionHeader eyebrow="Reviews" title="What Customers Say" subtitle="Real feedback from our happy customers." />
+      <SectionHeader
+        eyebrow="Reviews"
+        title="What Customers Say"
+        subtitle="Real feedback from our happy customers."
+      />
       <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {testimonials.map((t, i) => (
           <div key={i} className="premium-card rounded-2xl p-6">
@@ -405,15 +544,37 @@ function Testimonials() {
 function Contact({ onInquire }: { onInquire: (s?: string) => void }) {
   return (
     <section id="contact" className="py-20 sm:py-28 container mx-auto px-4">
-      <SectionHeader eyebrow="Get in Touch" title="Contact Us" subtitle="We're here to help — reach out anytime during business hours." />
+      <SectionHeader
+        eyebrow="Get in Touch"
+        title="Contact Us"
+        subtitle="We're here to help — reach out anytime during business hours."
+      />
       <div className="mt-14 grid lg:grid-cols-2 gap-8">
         <div className="premium-card rounded-2xl p-8 space-y-5">
-          <ContactRow icon={<Smartphone />} label="Business" value="STAR ELECTRONICS & REPERING CENTRE" />
+          <ContactRow
+            icon={<Smartphone />}
+            label="Business"
+            value="STAR ELECTRONICS & REPERING CENTRE"
+          />
           <ContactRow icon={<Users />} label="Owner" value="Sajid Iqbal" />
           <ContactRow icon={<Phone />} label="Phone" value={PHONE_DISPLAY} href={`tel:${PHONE}`} />
-          <ContactRow icon={<MessageCircle />} label="WhatsApp" value={PHONE_DISPLAY} href={`https://wa.me/${WA}`} />
-          <ContactRow icon={<Mail />} label="Email" value="sajidiqbal7909@gmail.com" href="mailto:sajidiqbal7909@gmail.com" />
-          <ContactRow icon={<MapPin />} label="Address" value="Lilja Hatiya Gachhi, Mahishi, Saharsa, Bihar, India" />
+          <ContactRow
+            icon={<MessageCircle />}
+            label="WhatsApp"
+            value={PHONE_DISPLAY}
+            href={`https://wa.me/${WA}`}
+          />
+          <ContactRow
+            icon={<Mail />}
+            label="Email"
+            value="sajidiqbal7909@gmail.com"
+            href="mailto:sajidiqbal7909@gmail.com"
+          />
+          <ContactRow
+            icon={<MapPin />}
+            label="Address"
+            value="Lilja Hatiya Gachhi, Mahishi, Saharsa, Bihar, India"
+          />
           <ContactRow icon={<Clock />} label="Business Hours" value="8:00 AM – 8:00 PM" />
         </div>
         <QuickContactForm onInquire={onInquire} />
@@ -422,17 +583,40 @@ function Contact({ onInquire }: { onInquire: (s?: string) => void }) {
   );
 }
 
-function ContactRow({ icon, label, value, href }: { icon: React.ReactNode; label: string; value: string; href?: string }) {
+function ContactRow({
+  icon,
+  label,
+  value,
+  href,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  value: string;
+  href?: string;
+}) {
   const content = (
     <div className="flex items-start gap-4">
-      <div className="h-10 w-10 rounded-xl bg-primary/10 border border-primary/30 text-primary grid place-items-center shrink-0">{icon}</div>
+      <div className="h-10 w-10 rounded-xl bg-primary/10 border border-primary/30 text-primary grid place-items-center shrink-0">
+        {icon}
+      </div>
       <div>
         <div className="text-[11px] uppercase tracking-widest text-primary/80">{label}</div>
         <div className="text-foreground font-medium">{value}</div>
       </div>
     </div>
   );
-  return href ? <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="block hover:opacity-80 transition">{content}</a> : content;
+  return href ? (
+    <a
+      href={href}
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel="noopener noreferrer"
+      className="block hover:opacity-80 transition"
+    >
+      {content}
+    </a>
+  ) : (
+    content
+  );
 }
 
 function QuickContactForm({ onInquire: _ }: { onInquire: (s?: string) => void }) {
@@ -445,14 +629,39 @@ function QuickContactForm({ onInquire: _ }: { onInquire: (s?: string) => void })
   return (
     <form onSubmit={submit} className="premium-card rounded-2xl p-8 space-y-4">
       <h3 className="font-display text-2xl font-bold text-gold-gradient">Send WhatsApp Inquiry</h3>
-      <input required placeholder="Name" value={f.name} onChange={(e) => setF({ ...f, name: e.target.value })} maxLength={100}
-        className="w-full bg-secondary border border-primary/20 rounded-md px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition" />
-      <input required placeholder="Phone" type="tel" value={f.phone} onChange={(e) => setF({ ...f, phone: e.target.value })} maxLength={15}
-        className="w-full bg-secondary border border-primary/20 rounded-md px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition" />
-      <input required placeholder="Required Product / Service" value={f.service} onChange={(e) => setF({ ...f, service: e.target.value })} maxLength={120}
-        className="w-full bg-secondary border border-primary/20 rounded-md px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition" />
-      <textarea placeholder="Message" value={f.message} onChange={(e) => setF({ ...f, message: e.target.value })} rows={4} maxLength={500}
-        className="w-full bg-secondary border border-primary/20 rounded-md px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition resize-none" />
+      <input
+        required
+        placeholder="Name"
+        value={f.name}
+        onChange={(e) => setF({ ...f, name: e.target.value })}
+        maxLength={100}
+        className="w-full bg-secondary border border-primary/20 rounded-md px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition"
+      />
+      <input
+        required
+        placeholder="Phone"
+        type="tel"
+        value={f.phone}
+        onChange={(e) => setF({ ...f, phone: e.target.value })}
+        maxLength={15}
+        className="w-full bg-secondary border border-primary/20 rounded-md px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition"
+      />
+      <input
+        required
+        placeholder="Required Product / Service"
+        value={f.service}
+        onChange={(e) => setF({ ...f, service: e.target.value })}
+        maxLength={120}
+        className="w-full bg-secondary border border-primary/20 rounded-md px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition"
+      />
+      <textarea
+        placeholder="Message"
+        value={f.message}
+        onChange={(e) => setF({ ...f, message: e.target.value })}
+        rows={4}
+        maxLength={500}
+        className="w-full bg-secondary border border-primary/20 rounded-md px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition resize-none"
+      />
       <Button type="submit" variant="gold" size="lg" className="w-full">
         <MessageCircle className="h-5 w-5" /> Send WhatsApp Inquiry
       </Button>
@@ -468,7 +677,10 @@ function MapSection() {
         <iframe
           title="Star Electronics location"
           src="https://www.google.com/maps?q=Mahishi%2C%20Saharsa%2C%20Bihar&output=embed"
-          width="100%" height="380" loading="lazy" style={{ border: 0, filter: "grayscale(20%) contrast(1.05)" }}
+          width="100%"
+          height="380"
+          loading="lazy"
+          style={{ border: 0, filter: "grayscale(20%) contrast(1.05)" }}
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
@@ -483,10 +695,16 @@ function Footer() {
       <div className="container mx-auto px-4 py-14 grid md:grid-cols-3 gap-10">
         <div>
           <div className="flex items-center gap-3">
-            <img src={logo.url} alt="Star Electronics" className="h-12 w-12 rounded-md ring-1 ring-primary/40" />
+            <img
+              src={logo.url}
+              alt="Star Electronics"
+              className="h-12 w-12 rounded-md ring-1 ring-primary/40"
+            />
             <div>
               <div className="font-display font-bold text-gold-gradient">STAR ELECTRONICS</div>
-              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Trusted Service, Best Price</div>
+              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                Trusted Service, Best Price
+              </div>
             </div>
           </div>
           <p className="mt-4 text-sm text-muted-foreground">
@@ -496,19 +714,57 @@ function Footer() {
         <div>
           <div className="text-xs uppercase tracking-widest text-primary">Quick Links</div>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><a href="#services" className="text-muted-foreground hover:text-primary">Services</a></li>
-            <li><a href="#products" className="text-muted-foreground hover:text-primary">Products</a></li>
-            <li><a href="#contact" className="text-muted-foreground hover:text-primary">Contact</a></li>
-            <li><a href={`https://wa.me/${WA}`} className="text-muted-foreground hover:text-primary">WhatsApp</a></li>
-            <li><a href={`tel:${PHONE}`} className="text-muted-foreground hover:text-primary">Call Now</a></li>
+            <li>
+              <a href="#services" className="text-muted-foreground hover:text-primary">
+                Services
+              </a>
+            </li>
+            <li>
+              <a href="#products" className="text-muted-foreground hover:text-primary">
+                Products
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="text-muted-foreground hover:text-primary">
+                Contact
+              </a>
+            </li>
+            <li>
+              <a href={`https://wa.me/${WA}`} className="text-muted-foreground hover:text-primary">
+                WhatsApp
+              </a>
+            </li>
+            <li>
+              <a href={`tel:${PHONE}`} className="text-muted-foreground hover:text-primary">
+                Call Now
+              </a>
+            </li>
           </ul>
         </div>
         <div>
           <div className="text-xs uppercase tracking-widest text-primary">Reach Us</div>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-            <li>Phone: <a href={`tel:${PHONE}`} className="text-foreground hover:text-primary">{PHONE_DISPLAY}</a></li>
-            <li>WhatsApp: <a href={`https://wa.me/${WA}`} className="text-foreground hover:text-primary">{PHONE_DISPLAY}</a></li>
-            <li>Email: <a href="mailto:sajidiqbal7909@gmail.com" className="text-foreground hover:text-primary">sajidiqbal7909@gmail.com</a></li>
+            <li>
+              Phone:{" "}
+              <a href={`tel:${PHONE}`} className="text-foreground hover:text-primary">
+                {PHONE_DISPLAY}
+              </a>
+            </li>
+            <li>
+              WhatsApp:{" "}
+              <a href={`https://wa.me/${WA}`} className="text-foreground hover:text-primary">
+                {PHONE_DISPLAY}
+              </a>
+            </li>
+            <li>
+              Email:{" "}
+              <a
+                href="mailto:sajidiqbal7909@gmail.com"
+                className="text-foreground hover:text-primary"
+              >
+                sajidiqbal7909@gmail.com
+              </a>
+            </li>
             <li>Lilja Hatiya Gachhi, Mahishi, Saharsa, Bihar</li>
           </ul>
         </div>
@@ -526,13 +782,23 @@ function FloatingButtons() {
   return (
     <div className="fixed right-5 bottom-5 z-50 flex flex-col gap-3">
       <a href={`tel:${PHONE}`} className="group relative" aria-label="Call Now">
-        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 px-3 py-1 rounded-md bg-card border border-primary/30 text-xs text-foreground opacity-0 group-hover:opacity-100 transition whitespace-nowrap">Call Now</span>
+        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 px-3 py-1 rounded-md bg-card border border-primary/30 text-xs text-foreground opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
+          Call Now
+        </span>
         <span className="grid place-items-center h-14 w-14 rounded-full bg-gold-gradient text-primary-foreground shadow-gold-lg animate-pulse-gold">
           <Phone className="h-6 w-6" />
         </span>
       </a>
-      <a href={`https://wa.me/${WA}`} target="_blank" rel="noopener noreferrer" className="group relative" aria-label="Chat on WhatsApp">
-        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 px-3 py-1 rounded-md bg-card border border-primary/30 text-xs text-foreground opacity-0 group-hover:opacity-100 transition whitespace-nowrap">Chat on WhatsApp</span>
+      <a
+        href={`https://wa.me/${WA}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative"
+        aria-label="Chat on WhatsApp"
+      >
+        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 px-3 py-1 rounded-md bg-card border border-primary/30 text-xs text-foreground opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
+          Chat on WhatsApp
+        </span>
         <span className="grid place-items-center h-14 w-14 rounded-full bg-[var(--color-whatsapp)] text-white shadow-lg animate-pulse-whatsapp">
           <MessageCircle className="h-7 w-7" />
         </span>
@@ -542,11 +808,21 @@ function FloatingButtons() {
 }
 
 /* ---------- SECTION HEADER ---------- */
-function SectionHeader({ eyebrow, title, subtitle }: { eyebrow: string; title: string; subtitle: string }) {
+function SectionHeader({
+  eyebrow,
+  title,
+  subtitle,
+}: {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+}) {
   return (
     <div className="text-center max-w-2xl mx-auto">
       <div className="text-xs uppercase tracking-[0.3em] text-primary">{eyebrow}</div>
-      <h2 className="mt-3 font-display text-4xl sm:text-5xl font-bold text-gold-gradient">{title}</h2>
+      <h2 className="mt-3 font-display text-4xl sm:text-5xl font-bold text-gold-gradient">
+        {title}
+      </h2>
       <p className="mt-4 text-muted-foreground">{subtitle}</p>
     </div>
   );
